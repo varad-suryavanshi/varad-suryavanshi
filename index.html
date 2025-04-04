@@ -1,81 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
+  <title>About</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Varad Suryavanshi | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}</style>
 </head>
-<body>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
 
-  <header>
-    <h1>Varad Vijay Suryavanshi</h1>
-    <p>AI Researcher | Data Analyst | NLP & CV Enthusiast</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#experience">Experience</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="image.jpeg" style="width:45%;" class="w3-round"><br><br>
+    <h4><b>VARAD VIJAY SURYAVANSHI</b></h4>
+    <p class="w3-text-grey">AI Researcher | Data Analyst</p>
+  </div>
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-home fa-fw w3-margin-right"></i>HOME</a>
+    <a href="projects.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-th fa-fw w3-margin-right"></i>PROJECTS</a>
+    <a href="experience.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-briefcase fa-fw w3-margin-right"></i>EXPERIENCE</a>
+    <a href="research.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-flask fa-fw w3-margin-right"></i>RESEARCH</a>
+    <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+  </div>
+</nav>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      Hi! I'm Varad, a Computer Science graduate student at NYU with a passion for building AI-powered systems in the fields of Computer Vision, NLP, and Finance. I’ve worked on fine-tuning LLMs, real-time trading systems, document understanding pipelines, and more. I enjoy solving real-world problems using a mix of deep learning, big data, and cloud technologies.
-    </p>
-    <p>
-      📍 Currently in New York<br>
-      🎓 M.S. in CS at NYU | B.E. from University of Mumbai<br>
-      ⚡ Love building with PyTorch, TensorFlow, SQL, LangChain, and more!
-    </p>
-  </section>
+<!-- Overlay -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-  <section id="projects">
-    <h2>Highlighted Projects</h2>
-    <div class="project">
-      <h3>ConstituAI</h3>
-      <p>Fine-tuned LLaMA-2-7B on Indian Law using LoRA & QLoRA. Improved legal query accuracy by 20% and reduced memory footprint using 4-bit quantization. [<a href="https://huggingface.co/your-model-link">View on Hugging Face</a>]</p>
+<!-- Main content -->
+<div class="w3-main" style="margin-left:300px">
+  <div class="w3-container w3-padding-32">
+    <h1 class="w3-xxlarge w3-text-teal"><b>About Me</b></h1>
+
+    <p>Hi! I’m Varad Vijay Suryavanshi—a passionate AI researcher, data analyst, and software developer currently pursuing my Master’s in Computer Science at New York University. I earned my Bachelor’s in Engineering from the University of Mumbai and have developed expertise in machine learning, computer vision, natural language processing, and systems programming.</p>
+    
+    <p>My work spans a diverse set of projects—from fine-tuning large language models on Indian legal texts (ConstituAI) and building end-to-end document understanding pipelines to designing real-time data streaming systems and sophisticated predictive models for healthcare and finance. I interned at NTT Data Business Solutions, where I built an AI-driven chatbot that significantly improved search accuracy and reduced API costs.</p>
+    
+    <h3>Education & Skills</h3>
+    <ul>
+      <li><strong>NYU:</strong> M.S. in Computer Science (expected 2026)</li>
+      <li><strong>University of Mumbai:</strong> B.E. in Computer Science</li>
+    </ul>
+
+
+    <h3>Technical Skills & Expertise</h3>
+
+    <div class="w3-row-padding w3-margin-bottom">
+      <div class="w3-half">
+        <ul class="w3-ul">
+          <li><b>Languages:</b> Python, C, C++, Scala, Java, JavaScript, Prolog, SQL</li>
+          <li><b>Web & Frontend:</b> React, Angular, Node.js</li>
+          <li><b>Database:</b> MySQL, NoSQL, MongoDB</li>
+          <li><b>Visualization:</b> Power BI, Tableau, Excel, Matplotlib, Seaborn</li>
+          <li><b>Cloud Platforms:</b> Amazon Web Services (EC2, S3, Lambda)</li>
+          <li><b>DevOps & Tools:</b> Docker, Kubernetes, Git, GitHub Actions</li>
+        </ul>
+      </div>
+      <div class="w3-half">
+        <ul class="w3-ul">
+          <li><b>ML & AI Frameworks:</b> Scikit-learn, TensorFlow, Keras, PyTorch, OpenCV, NLTK</li>
+          <li><b>Big Data & Distributed Systems:</b> Hadoop, PySpark, Apache Kafka</li>
+          <li><b>System Knowledge:</b> Process Scheduling, Memory Management, System Calls, OS Internals</li>
+          <li><b>Applied Domains:</b> NLP, Computer Vision, Time Series, Finance, Healthcare</li>
+          <li><b>Others:</b> REST APIs, CI/CD, Streamlit, FastAPI, Hugging Face, LangChain</li>
+        </ul>
+      </div>
     </div>
-    <div class="project">
-      <h3>Document Understanding Pipeline</h3>
-      <p>OCR + LayoutLMv3 pipeline for invoice and legal document parsing. Used Detectron2 for layout detection, deployed with CUDA acceleration.</p>
-    </div>
-    <div class="project">
-      <h3>High Frequency Trading</h3>
-      <p>LSTM-based stock prediction system integrating sentiment from Twitter & news with technical indicators. Presented at ICDMAI.</p>
-    </div>
-    <div class="project">
-      <h3>SQL RAG Pipeline</h3>
-      <p>Built a GPT-4-powered chatbot that converts natural language queries into SQL for a banking dataset. Streamlit UI for live querying.</p>
-    </div>
-    <div class="project">
-      <h3>Probability of Default Model</h3>
-      <p>First prize–winning model predicting loan defaults from 1M+ financial records using pyGAM and extensive feature engineering.</p>
-    </div>
-  </section>
 
-  <section id="experience">
-    <h2>Internship & Experience</h2>
-    <h3>NTT Data Business Solutions (AI Intern)</h3>
-    <p>
-      🔹 Built an AI chatbot using LangChain, GPT-3.5, and ChromaDB for RAG<br>
-      🔹 Reduced latency to 1.8s and cut OpenAI costs using top-k token optimization<br>
-      🔹 Implemented vector store with Hugging Face embeddings
-    </p>
-  </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>📧 Email: <a href="mailto:vs3273@nyu.edu">vs3273@nyu.edu</a></p>
-    <p>🔗 <a href="https://www.linkedin.com/in/varad-suryavanshi-a1b975227">LinkedIn</a></p>
-    <p>💻 <a href="https://github.com/varad-suryavanshi">GitHub</a></p>
-  </section>
+    
+  </div>
 
-  <footer>
-    <p>© 2025 Varad Suryavanshi. Built with ❤️ and HTML/CSS.</p>
+  <footer class="w3-container w3-center w3-padding-32">
+    <p>© 2025 Varad Suryavanshi</p>
   </footer>
+</div>
+
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
 
 </body>
 </html>
-

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+  </style>
+</head>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="image.jpeg" style="width:45%;" class="w3-round"><br><br>
+    <h4><b>VARAD VIJAY SURYAVANSHI</b></h4>
+    <p class="w3-text-grey">AI Researcher | Data Analyst</p>
+  </div>
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-home fa-fw w3-margin-right"></i>HOME</a>
+    <a href="projects.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th fa-fw w3-margin-right"></i>PROJECTS</a>
+    <a href="experience.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-briefcase fa-fw w3-margin-right"></i>EXPERIENCE</a>
+    <a href="research.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-flask fa-fw w3-margin-right"></i>RESEARCH</a>
+    <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+  </div>
+</nav>
+
+<!-- Overlay -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content -->
+<div class="w3-main" style="margin-left:300px">
+  <div class="w3-container w3-padding-32">
+    <h1 class="w3-xxlarge w3-text-teal"><b>Projects</b></h1>
+
+    <!-- Project Cards Start -->
+
+    <!-- Example project card -->
+    <div class="w3-margin-bottom w3-white w3-padding w3-round-large">
+      <h2 class="w3-text-dark-grey"><b>ConstituAI: Fine-Tuning LLaMA 2 on Indian Legal Texts</b></h2>
+      <p>Fine-tuned LLaMA 2 on Indian legal QA pairs with 4-bit quantization. Demonstrates how LLMs can specialize in legal domains with a full UI for inference.</p>
+      <p  >A legal-domain LLM fine-tuned on Indian constitutional texts using LLaMA 2–7B Chat with QLoRA and deployed via Streamlit. Hosted on Hugging Face for legal education and citizen support.</p>
+      <a href="https://github.com/varad-suryavanshi/ConstituAI-Fine-Tuning-Llama-2-on-the-Indian-Law-Dataset" class="w3-button w3-teal w3-small" target="_blank"><i class="fa fa-github w3-margin-right"></i>View on GitHub</a>
+    </div>
+
+    <div class="w3-margin-bottom w3-white w3-padding w3-round-large">
+      <h2 class="w3-text-dark-grey"><b>Document Understanding Pipeline (LayoutLMv3 + Detectron2 + Tesseract OCR)</b></h2>
+      <p>Uses Detectron2 for region detection, Tesseract for OCR, and LayoutLMv3 for interpreting document structure. Perfect for automating paperwork.</p>
+      <p  >End-to-end document intelligence using visual layout analysis, OCR, and transformer-based token classification to extract data from complex PDFs and forms.</p>
+      <a href="https://github.com/varad-suryavanshi/document-understanding-ocr" class="w3-button w3-teal w3-small" target="_blank"><i class="fa fa-github w3-margin-right"></i>View on GitHub</a>
+    </div>
+
+    <div class="w3-margin-bottom w3-white w3-padding w3-round-large">
+      <h2 class="w3-text-dark-grey"><b>LLM-Driven SQL RAG Pipeline for Banking</b></h2>
+      <p>Translates questions into SQL, queries a database, and returns user-friendly responses. Built-in write op confirmations and chatbot interface.</p>
+      <p  >Natural language-to-SQL interface powered by OpenAI and LangChain, built for querying and interacting with a synthetic banking database through Streamlit.</p>
+      <a href="https://github.com/varad-suryavanshi/LLM-Driven-SQL-RAG-Pipeline-for-Banking-Data" class="w3-button w3-teal w3-small" target="_blank"><i class="fa fa-github w3-margin-right"></i>View on GitHub</a>
+    </div>
+
+    <div class="w3-margin-bottom w3-white w3-padding w3-round-large">
+      <h2 class="w3-text-dark-grey"><b>Patient Readmission Prediction (Healthcare ML + GCP)</b></h2>
+      <p>Builds an ML pipeline with SMOTE, XGBoost, and GCP-hosted preprocessing. Trains models via BigQuery and deploys as a cloud-ready prediction app.</p>
+      <p  >Predicts 30-day readmissions using ML models trained on hospital data. Features BigQuery data loading, threshold tuning, and Streamlit deployment.</p>
+      <a href="https://github.com/varad-suryavanshi/Patient-Readmission-Prediction" class="w3-button w3-teal w3-small" target="_blank"><i class="fa fa-github w3-margin-right"></i>View on GitHub</a>
+    </div>
+
+    <!-- Continue for all other projects... You can paste similar <div> blocks below using content from the previous response -->
+
+    <div class="w3-margin-bottom w3-white w3-padding w3-round-large">
+        <h2 class="w3-text-dark-grey"><b>FastAPI Trade Order Microservice (Deployed on AWS)</b></h2>
+        <p>Create/retrieve orders via REST, manage database in SQLite, and deploy automatically with GitHub Actions on commit.</p>
+        <p  >A REST API built with FastAPI for handling trade orders, Dockerized and deployed to AWS EC2 with CI/CD via GitHub Actions.</p>
+        <a href="https://github.com/varad-suryavanshi/FastAPI-Trade-Order-Service" class="w3-button w3-teal w3-small" target="_blank"><i class="fa fa-github w3-margin-right"></i>View on GitHub</a>
+    </div>
+
+    <div class="w3-margin-bottom w3-white w3-padding w3-round-large">
+        <h2 class="w3-text-dark-grey"><b>Corporate Default Probability Model</b></h2>
+        <p>Processed millions of rows to create risk scores and assess company defaults. Includes calibration and preprocessing modules.</p>
+        <p  >Predicts corporate loan defaults based on financial metrics using custom ratio engineering and pyGAM for interpretable risk modeling.</p>
+        <a href="https://github.com/varad-suryavanshi/Probability-of-default" class="w3-button w3-teal w3-small" target="_blank"><i class="fa fa-github w3-margin-right"></i>View on GitHub</a>
+    </div>
+
+    <div class="w3-margin-bottom w3-white w3-padding w3-round-large">
+        <h2 class="w3-text-dark-grey"><b>Credit Card Fraud Detection with Cost Optimization</b></h2>
+        <p>Trains models like Random Forest and Logistic Regression. Uses custom metrics to reduce false positives and maximize financial savings.</p>
+        <p  >Applies ML to identify fraudulent transactions from real-world datasets, using class balancing and cost-based thresholding.</p>
+        <a href="https://github.com/varad-suryavanshi/Fraud-Detection-Model-Cost-Optimization" class="w3-button w3-teal w3-small" target="_blank"><i class="fa fa-github w3-margin-right"></i>View on GitHub</a>
+    </div>
+
+    <div class="w3-margin-bottom w3-white w3-padding w3-round-large">
+        <h2 class="w3-text-dark-grey"><b>International Space Station Real-Time Tracker with Kafka, Spark, Power BI</b></h2>
+        <p>Ingests live ISS data, processes via Spark, stores as Parquet, and visualizes in Power BI. Great showcase of big data pipelines and real-time analytics.</p>
+        <p  >Real-time geospatial tracking of the International Space Station using streaming architecture: Kafka producer, Spark processor, Power BI dashboards.</p>
+        <a href="https://github.com/varad-suryavanshi/International-Space-Station-Tracker" class="w3-button w3-teal w3-small" target="_blank"><i class="fa fa-github w3-margin-right"></i>View on GitHub</a>
+    </div>
+    
+    <div class="w3-margin-bottom w3-white w3-padding w3-round-large">
+        <h2 class="w3-text-dark-grey"><b>Lower Back Pain Classification</b></h2>
+        <p>Built using UCI biomechanical dataset. Evaluated using precision, recall, ROC-AUC, and more. Easy to extend for diagnostic apps.</p>
+        <p  >A healthcare-focused ML classifier trained on vertebral measurements to detect spinal abnormalities using SVM and Random Forest.</p>
+        <a href="https://github.com/varad-suryavanshi/Lower-back-pain-symptoms-classification-model" class="w3-button w3-teal w3-small" target="_blank"><i class="fa fa-github w3-margin-right"></i>View on GitHub</a>
+    </div>
+      
+    <div class="w3-margin-bottom w3-white w3-padding w3-round-large">
+        <h2 class="w3-text-dark-grey"><b>OS Virtual Memory Paging Simulator (C++)</b></h2>
+        <p>Implements core virtual memory logic and compares each strategy using grading scripts. Great demonstration of systems knowledge.</p>
+        <p  >Simulates paging in operating systems with multiple replacement algorithms: FIFO, NRU, Aging, Clock, and Working Set.</p>
+        <a href="https://github.com/varad-suryavanshi/os-virtual-memory-paging-simulator" class="w3-button w3-teal w3-small" target="_blank"><i class="fa fa-github w3-margin-right"></i>View on GitHub</a>
+    </div>
+    
+    <div class="w3-margin-bottom w3-white w3-padding w3-round-large">
+        <h2 class="w3-text-dark-grey"><b>CPU Scheduling Simulator (C++)</b></h2>
+        <p>Analyzes process scheduling and logs turnaround/wait times and utilization. Runs tests via shell scripts.</p>
+        <p  >C++ simulator for scheduling algorithms like FCFS, SRTF, RR, and Priority. Includes test automation and grading tools.</p>
+        <a href="https://github.com/varad-suryavanshi/os-cpu-scheduling-simulator" class="w3-button w3-teal w3-small" target="_blank"><i class="fa fa-github w3-margin-right"></i>View on GitHub</a>
+    </div>
+
+    <div class="w3-margin-bottom w3-white w3-padding w3-round-large">
+        <h2 class="w3-text-dark-grey"><b>I/O Scheduler Simulation (C++)</b></h2>
+        <p>Tracks disk head movement and evaluates scheduling effectiveness. Pass/fail outputs and grading automation included.</p>
+        <p  >Disk I/O simulator implementing LOOK, CLOOK, SSTF, and FLOOK. Includes comparison against reference output.</p>
+        <a href="https://github.com/varad-suryavanshi/os-io-scheduler-simulator-cpp" class="w3-button w3-teal w3-small" target="_blank"><i class="fa fa-github w3-margin-right"></i>View on GitHub</a>
+    </div>
+
+
+    <div class="w3-margin-bottom w3-white w3-padding w3-round-large">
+        <h2 class="w3-text-dark-grey"><b>React Blog App (Create React App Starter)</b></h2>
+        <p>Uses modern React toolchain, includes build/test scripts, and is deployable to any static site hosting service.</p>
+        <p  >A simple blogging app created with Create React App for testing components and learning frontend workflows.</p>
+        <a href="https://github.com/varad-suryavanshi/blogging-website" class="w3-button w3-teal w3-small" target="_blank"><i class="fa fa-github w3-margin-right"></i>View on GitHub</a>
+     </div>
+      
+      
+      
+          
+
+    <!-- Project Cards End -->
+  </div>
+
+  <footer class="w3-container w3-center w3-padding-32">
+    <p>© 2025 Varad Suryavanshi</p>
+  </footer>
+</div>
+
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>

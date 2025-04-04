@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Research Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+  </style>
+</head>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container">
+    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
+      <i class="fa fa-remove"></i>
+    </a>
+    <img src="image.jpeg" style="width:45%;" class="w3-round"><br><br>
+    <h4><b>VARAD SURYAVANSHI</b></h4>
+    <p class="w3-text-grey">AI Researcher | Data Analyst</p>
+  </div>
+  <div class="w3-bar-block">
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-home fa-fw w3-margin-right"></i>HOME</a>
+    <a href="projects.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-th fa-fw w3-margin-right"></i>PROJECTS</a>
+    <a href="experience.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-briefcase fa-fw w3-margin-right"></i>EXPERIENCE</a>
+    <a href="research.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-flask fa-fw w3-margin-right"></i>RESEARCH</a>
+    <a href="contact.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+  </div>
+</nav>
+
+<!-- Overlay -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content -->
+<div class="w3-main" style="margin-left:300px">
+  <div class="w3-container w3-padding-32">
+    <h1 class="w3-xxlarge w3-text-teal"><b>Research Projects</b></h1>
+
+    <!-- High Frequency Trading Project -->
+    <div class="w3-margin-bottom w3-white w3-padding w3-round-large">
+      <h2 class="w3-text-dark-grey"><b>High Frequency Trading Using Sentiment Analysis</b></h2>
+      <p>Engineered a high-frequency trading (HFT) system that combines market indicators with real-time sentiment signals to improve trade accuracy and profitability.</p>
+      <ul>
+        <li>Integrated technical indicators (MACD, RSI, Bollinger Bands) with Twitter and Google News sentiment scores.</li>
+        <li>Built an LSTM-based deep learning model for forecasting stock movement using combined features.</li>
+        <li>Conducted backtesting and hyperparameter tuning to optimize strategy risk-return profile.</li>
+        <li><b>Presented at:</b> 8th International Conference on Data Management, Analytics, and Innovation (ICDMAI).</li>
+      </ul>
+    </div>
+
+    <!-- Tulsi Leaf Disease Detection Project -->
+    <div class="w3-margin-bottom w3-white w3-padding w3-round-large">
+      <h2 class="w3-text-dark-grey"><b>Tulsi Leaf Disease Detection Using CNN</b></h2>
+      <p>Designed a deep learning system for identifying diseases in holy basil (Tulsi) leaves using CNNs and GANs for image classification.</p>
+      <ul>
+        <li>Explored multiple architectures: VGG16, ResNet50, R-CNN, and GANs for performance benchmarking.</li>
+        <li>Performed advanced preprocessing: Gaussian blurring, HSV conversion, and color thresholding.</li>
+        <li>Achieved high precision, recall, and F1 scores via transfer learning and hyperparameter tuning.</li>
+        <li>Applied image augmentation and ResNet-based feature extraction to boost generalization.</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer class="w3-container w3-center w3-padding-32">
+    <p>© 2025 Varad Suryavanshi</p>
+  </footer>
+</div>
+
+<script>
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
