@@ -1,73 +1,105 @@
 import React from "react";
-import mock01 from '../assets/images/mock01.png';
-import mock02 from '../assets/images/mock02.png';
-import mock03 from '../assets/images/mock03.png';
-import mock04 from '../assets/images/mock04.png';
-import mock05 from '../assets/images/mock05.png';
-import mock06 from '../assets/images/mock06.png';
-import mock07 from '../assets/images/mock07.png';
-import mock08 from '../assets/images/mock08.png';
-import mock09 from '../assets/images/mock09.png';
-import mock10 from '../assets/images/mock10.png';
-import '../assets/styles/Project.scss';
+import "../assets/styles/Project.scss";
 
 function Project() {
-    return(
-    <div className="projects-container" id="projects">
-        <h1>Personal Projects</h1>
-        <div className="projects-grid">
-            <div className="project">
-                <a href="https://www.filmate.club/" target="_blank" rel="noreferrer"><img src={mock10} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://www.filmate.club/" target="_blank" rel="noreferrer"><h2>Filmate AI</h2></a>
-                <p>Developed movie finder app with semantic search and sentiment analysis using OpenAI GPT-3.5 Turbo, Qdrant, React, and Flask.</p>
-            </div>
-            <div className="project">
-                <a href="https://yujisatojr.itch.io/highspeedchase" target="_blank" rel="noreferrer"><img src={mock09} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://yujisatojr.itch.io/highspeedchase" target="_blank" rel="noreferrer"><h2>High Speed Chase</h2></a>
-                <p>Designed, developed, and launched a 3D multiplayer racing game with C# and Unity. This is available on Itch.io for gamers worldwide to enjoy.</p>
-            </div>
-            <div className="project">
-                <a href="https://yujisatojr.itch.io/spacecraft" target="_blank" rel="noreferrer"><img src={mock08} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://yujisatojr.itch.io/spacecraft" target="_blank" rel="noreferrer"><h2>Astro Raiders</h2></a>
-                <p>Developed and released a 2D shooting game with C# and Unity. This project is hosted on the Itch.io public marketplace.</p>
-            </div>
-            <div className="project">
-                <a href="https://www.datumlearn.com/" target="_blank" rel="noreferrer"><img src={mock07} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://www.datumlearn.com/" target="_blank" rel="noreferrer"><h2>Datum: Integrated Learning Platform</h2></a>
-                <p>This is an online educational platform that provides high-quality, data science-focused learning resources in the Japanese language. I created the entire platform from scratch using Ruby on Rails.</p>
-            </div>
-            <div className="project">
-                <a href="http://www.wemanage.jp/" target="_blank" rel="noreferrer"><img src={mock06} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="http://www.wemanage.jp/" target="_blank" rel="noreferrer"><h2>WeManage: Real Estate Asset Management</h2></a>
-                <p>This mobile application allows realtors in Japan to securely manage their property information and view future income predictions. This app is built with Ruby on Rails and JavaScript.</p>
-            </div>
-            <div className="project">
-                <a href="https://www.byuh.edu/covid-19-case-management" target="_blank" rel="noreferrer"><img src={mock05} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://www.byuh.edu/covid-19-case-management" target="_blank" rel="noreferrer"><h2>COVID-19 Case Management</h2></a>
-                <p>Built official charts for COVID/vaccination tracking for an educational institution using JavaScript and the Google Sheets API v4. The dashboard served the university's leadership in their decision-making processes.</p>
-            </div>
-            <div className="project">
-                <a href="https://github.com/yujisatojr/multi-reg-analysis" target="_blank" rel="noreferrer"><img src={mock04} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/yujisatojr/multi-reg-analysis" target="_blank" rel="noreferrer"><h2>Multiple Regression Property Analysis</h2></a>
-                <p>Analyzed the real estate market in Japan and predicted property prices by implementing statistical methods such as OLS and multi-regression analysis. This project leveraged Python and various libraries such as Pandas, NumPy, Matplotlib, and Scikit-Learn.</p>
-            </div>
-            <div className="project">
-                <a href="https://holokai.byuh.edu/programs-of-study" target="_blank" rel="noreferrer"><img src={mock03} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://holokai.byuh.edu/programs-of-study" target="_blank" rel="noreferrer"><h2>Programs of Study</h2></a>
-                <p>Designed and developed a custom component for a CMS-based platform (e.g., 'Brightspot') using Java, Handlebars, and LESS. University students can find their majors of interest through this module.</p>
-            </div>
-            <div className="project">
-                <a href="https://hookele.byuh.edu/transfer-evaluation-guidelines-and-matrix" target="_blank" rel="noreferrer"><img src={mock02} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://hookele.byuh.edu/transfer-evaluation-guidelines-and-matrix" target="_blank" rel="noreferrer"><h2>Transfer Evaluation Matrix</h2></a>
-                <p>Created an interactive CSV table generator with Java, Handlebars, and LESS. This project helps transfer students to quickly identify eligible credits.</p>
-            </div>
-            <div className="project">
-                <a href="https://github.com/yujisatojr/submeowrine" target="_blank" rel="noreferrer"><img src={mock01} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/yujisatojr/submeowrine" target="_blank" rel="noreferrer"><h2>Submeowrine</h2></a>
-                <p>Developed and released an Android mobile application using Java and Android Studio that runs a 2D shooting game.</p>
+    return (
+        <div className="projects-container" id="projects">
+            <h1>Personal Projects</h1>
+            <div className="projects-grid">
+
+                <div className="project">
+                    <a href="https://github.com/varad-suryavanshi/ConstituAI-Fine-Tuning-Llama-2-on-the-Indian-Law-Dataset" target="_blank" rel="noreferrer">
+                        <h2>ConstituAI: Fine-Tuning LLaMA 2 on Indian Legal Texts</h2>
+                    </a>
+                    <p>Fine-tuned LLaMA 2 on Indian legal QA pairs with 4-bit quantization. Demonstrates how LLMs can specialize in legal domains with a full UI for inference.</p>
+                </div>
+
+                <div className="project">
+                    <a href="https://github.com/varad-suryavanshi/document-understanding-ocr" target="_blank" rel="noreferrer">
+                        <h2>Document Understanding Pipeline (LayoutLMv3 + Detectron2 + Tesseract OCR)</h2>
+                    </a>
+                    <p>End-to-end document intelligence using visual layout analysis, OCR, and transformer-based token classification to extract data from complex PDFs and forms.</p>
+                </div>
+
+                <div className="project">
+                    <a href="https://github.com/varad-suryavanshi/LLM-Driven-SQL-RAG-Pipeline-for-Banking-Data" target="_blank" rel="noreferrer">
+                        <h2>LLM-Driven SQL RAG Pipeline for Banking</h2>
+                    </a>
+                    <p>Natural language-to-SQL interface powered by OpenAI and LangChain, built for querying and interacting with a synthetic banking database through Streamlit.</p>
+                </div>
+
+                <div className="project">
+                    <a href="https://github.com/varad-suryavanshi/Patient-Readmission-Prediction" target="_blank" rel="noreferrer">
+                        <h2>Patient Readmission Prediction (Healthcare ML + GCP)</h2>
+                    </a>
+                    <p>Predicts 30-day readmissions using ML models trained on hospital data. Features BigQuery data loading, threshold tuning, and Streamlit deployment.</p>
+                </div>
+
+                <div className="project">
+                    <a href="https://github.com/varad-suryavanshi/FastAPI-Trade-Order-Service" target="_blank" rel="noreferrer">
+                        <h2>FastAPI Trade Order Microservice (Deployed on AWS)</h2>
+                    </a>
+                    <p>A REST API built with FastAPI for handling trade orders, Dockerized and deployed to AWS EC2 with CI/CD via GitHub Actions.</p>
+                </div>
+
+                <div className="project">
+                    <a href="https://github.com/varad-suryavanshi/Probability-of-default" target="_blank" rel="noreferrer">
+                        <h2>Corporate Default Probability Model</h2>
+                    </a>
+                    <p>Predicts corporate loan defaults based on financial metrics using custom ratio engineering and pyGAM for interpretable risk modeling.</p>
+                </div>
+
+                <div className="project">
+                    <a href="https://github.com/varad-suryavanshi/Fraud-Detection-Model-Cost-Optimization" target="_blank" rel="noreferrer">
+                        <h2>Credit Card Fraud Detection with Cost Optimization</h2>
+                    </a>
+                    <p>Applies ML to identify fraudulent transactions from real-world datasets, using class balancing and cost-based thresholding.</p>
+                </div>
+
+                <div className="project">
+                    <a href="https://github.com/varad-suryavanshi/International-Space-Station-Tracker" target="_blank" rel="noreferrer">
+                        <h2>International Space Station Real-Time Tracker with Kafka, Spark, Power BI</h2>
+                    </a>
+                    <p>Real-time geospatial tracking of the ISS using streaming architecture: Kafka producer, Spark processor, Power BI dashboards.</p>
+                </div>
+
+                <div className="project">
+                    <a href="https://github.com/varad-suryavanshi/Lower-back-pain-symptoms-classification-model" target="_blank" rel="noreferrer">
+                        <h2>Lower Back Pain Classification</h2>
+                    </a>
+                    <p>A healthcare-focused ML classifier trained on vertebral measurements to detect spinal abnormalities using SVM and Random Forest.</p>
+                </div>
+
+                <div className="project">
+                    <a href="https://github.com/varad-suryavanshi/os-virtual-memory-paging-simulator" target="_blank" rel="noreferrer">
+                        <h2>OS Virtual Memory Paging Simulator (C++)</h2>
+                    </a>
+                    <p>Simulates paging in operating systems with multiple replacement algorithms: FIFO, NRU, Aging, Clock, and Working Set.</p>
+                </div>
+
+                <div className="project">
+                    <a href="https://github.com/varad-suryavanshi/os-cpu-scheduling-simulator" target="_blank" rel="noreferrer">
+                        <h2>CPU Scheduling Simulator (C++)</h2>
+                    </a>
+                    <p>C++ simulator for scheduling algorithms like FCFS, SRTF, RR, and Priority. Includes test automation and grading tools.</p>
+                </div>
+
+                <div className="project">
+                    <a href="https://github.com/varad-suryavanshi/os-io-scheduler-simulator-cpp" target="_blank" rel="noreferrer">
+                        <h2>I/O Scheduler Simulation (C++)</h2>
+                    </a>
+                    <p>Disk I/O simulator implementing LOOK, CLOOK, SSTF, and FLOOK. Includes comparison against reference output.</p>
+                </div>
+
+                <div className="project">
+                    <a href="https://github.com/varad-suryavanshi/blogging-website" target="_blank" rel="noreferrer">
+                        <h2>React Blog App (Create React App Starter)</h2>
+                    </a>
+                    <p>A simple blogging app created with Create React App for testing components and learning frontend workflows.</p>
+                </div>
+
             </div>
         </div>
-    </div>
     );
 }
 
