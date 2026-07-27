@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Varad Suryavanshi</title>
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
+<meta name="description" content="Varad Vijay Suryavanshi — AI researcher (MSCS, NYU '26). World models, embodied AI, agentic systems, LLM evaluation.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F5F4EE;
+  --surface:#FAF9F5;
+  --ink:#29261B;
+  --muted:#6E6A5E;
+  --faint:#8A8574;
+  --accent:#C15F3C;
+  --accent-soft:#D97757;
+  --accent-wash:#F1E5DE;
+  --border:#E3E0D5;
+  --dark:#262624;
+  --dark-ink:#EDEAE2;
+  --green:#5E7C5A;
+  --mono:'JetBrains Mono',ui-monospace,'SF Mono',Menlo,Consolas,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--mono);
+  font-size:15px;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+/* ---------- top nav ---------- */
+.topnav{
+  position:fixed;top:0;left:0;right:0;z-index:50;
+  background:rgba(250,249,245,.92);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--border);
+}
+.topnav-inner{
+  max-width:1200px;margin:0 auto;padding:0 32px;
+  display:flex;align-items:center;justify-content:flex-end;height:56px;
+}
+.navlinks{display:flex;gap:4px;list-style:none;align-items:center}
+.navlinks a{
+  display:block;padding:6px 12px;font-size:13px;color:var(--muted);
+  border-radius:6px;transition:color .15s,background .15s;
+}
+.navlinks a:hover{color:var(--ink);background:var(--accent-wash);text-decoration:none}
+.navlinks a.active{color:var(--accent);font-weight:700}
+.navlinks a.resume-btn{
+  border:1px solid var(--accent);color:var(--accent);margin-left:8px;
+}
+.navlinks a.resume-btn:hover{background:var(--accent);color:#fff}
+
+/* ---------- layout ---------- */
+.wrap{
+  max-width:1200px;margin:0 auto;padding:0 32px;
+  display:flex;gap:56px;
+}
+.sidebar{
+  width:380px;flex-shrink:0;
+  position:sticky;top:0;height:100vh;
+  display:flex;flex-direction:column;justify-content:flex-start;
+  padding:100px 4px 48px 0;
+  overflow-y:auto;
+}
+.main{flex:1;min-width:0;padding:120px 0 96px}
+
+/* ---------- sidebar ---------- */
+.avatar-wrap{
+  width:190px;height:250px;border-radius:50%/50%;overflow:hidden;flex-shrink:0;
+  border:3px solid var(--surface);
+  box-shadow:0 0 0 1px var(--border),0 4px 18px rgba(41,38,27,.10);
+  margin-bottom:22px;
+}
+.avatar{
+  width:100%;height:100%;object-fit:cover;object-position:50% 15%;
+  transform:scale(1.6);transform-origin:50% 22%;
+  display:block;
+}
+h1.name{
+  font-size:34px;font-weight:800;line-height:1.15;letter-spacing:-.02em;
+  margin-bottom:8px;
+}
+.role{
+  font-size:14.5px;font-weight:500;color:var(--accent);margin-bottom:18px;
+}
+.summary{
+  font-size:13.5px;color:var(--muted);max-width:350px;margin-bottom:26px;
+}
+.meta{list-style:none;font-size:13px;color:var(--muted);margin-bottom:26px}
+.meta li{display:flex;gap:10px;align-items:baseline;padding:2.5px 0}
+.meta .k{color:var(--faint);width:82px;flex-shrink:0;font-size:12px}
+.socials{display:flex;gap:10px;flex-wrap:wrap}
+.socials a{
+  font-size:12.5px;padding:7px 14px;border:1px solid var(--border);
+  border-radius:999px;color:var(--muted);background:var(--surface);
+  transition:border-color .15s,color .15s,transform .15s;
+}
+.socials a:hover{border-color:var(--accent);color:var(--accent);text-decoration:none;transform:translateY(-1px)}
+
+/* ---------- main sections ---------- */
+section{margin-bottom:80px;scroll-margin-top:80px}
+.sec-label{
+  display:flex;align-items:center;gap:14px;margin-bottom:26px;
+}
+.sec-label h2{
+  font-size:14px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--ink);
+}
+.sec-label::after{content:'';flex:1;height:1px;background:var(--border)}
+
+/* cards */
+.card{
+  border:1px solid var(--border);border-radius:10px;background:var(--surface);
+  padding:22px 24px;margin-bottom:16px;
+  transition:border-color .15s,box-shadow .15s;
+}
+.card:hover{border-color:var(--accent-soft);box-shadow:0 2px 14px rgba(41,38,27,.06)}
+.card-top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:4px}
+.card h3{font-size:15px;font-weight:700}
+.card h3 a{color:var(--ink)}
+.card h3 a:hover{color:var(--accent)}
+.where{font-size:13px;color:var(--accent);font-weight:500}
+.when{font-size:12px;color:var(--faint);white-space:nowrap;padding-top:2px}
+.card p{font-size:13.5px;color:var(--muted);margin-top:10px}
+.card ul{margin:10px 0 0 18px;font-size:13.5px;color:var(--muted)}
+.card ul li{margin-bottom:7px}
+.card ul li::marker{color:var(--accent)}
+b,strong{color:var(--ink);font-weight:700}
+
+/* tags */
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.tag{
+  font-size:11px;padding:3px 10px;border-radius:999px;
+  background:var(--accent-wash);color:var(--accent);font-weight:500;
+}
+
+/* publications */
+.pub-venue{
+  display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;
+  padding:2px 10px;border-radius:4px;background:var(--dark);color:var(--dark-ink);
+  margin-bottom:8px;
+}
+.pub-venue.alt{background:var(--accent-wash);color:var(--accent)}
+.pub-links{margin-top:10px;font-size:13px}
+.pub-links a{margin-right:16px}
+
+/* project grid */
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid .card{margin-bottom:0;display:flex;flex-direction:column}
+.grid .card .stack{font-size:11.5px;color:var(--faint);margin-top:2px}
+.grid .card p{flex:1}
+
+/* skills */
+.skill-row{display:flex;gap:14px;padding:10px 0;border-bottom:1px dashed var(--border);font-size:13.5px}
+.skill-row:last-child{border-bottom:none}
+.skill-row .k{color:var(--faint);width:150px;flex-shrink:0;font-size:12px;padding-top:2px}
+.skill-row .v{color:var(--muted)}
+
+footer{
+  font-size:12px;color:var(--faint);border-top:1px solid var(--border);
+  padding-top:24px;
+}
+footer a{color:var(--muted)}
+
+/* ---------- responsive ---------- */
+/* ---------- global overflow safety ---------- */
+img,svg,video{max-width:100%}
+.card,.card p,.card h3,.summary,.where,.meta{overflow-wrap:break-word}
+
+@media(max-width:960px){
+  .wrap{flex-direction:column;gap:0}
+  .sidebar{position:static;height:auto;width:100%;padding:88px 0 8px;justify-content:flex-start;overflow:visible}
+  .main{padding:24px 0 80px}
+  .grid{grid-template-columns:1fr}
+  .navlinks a{padding:6px 8px;font-size:12px}
+  .topnav-inner{padding:0 16px;justify-content:flex-start;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+  .topnav-inner::-webkit-scrollbar{display:none}
+  .navlinks{flex-wrap:nowrap;white-space:nowrap;width:100%;justify-content:flex-end;min-width:max-content}
+  .wrap{padding:0 20px}
+  .summary{max-width:none}
+}
+@media(max-width:560px){
+  body{font-size:14px}
+  .navlinks .hide-sm{display:none}
+  .navlinks{justify-content:flex-start}
+  h1.name{font-size:26px}
+  .avatar-wrap{width:150px;height:198px;margin-left:auto;margin-right:auto}
+  .sidebar{text-align:center}
+  .meta li{justify-content:center}
+  .meta .k{width:auto;min-width:72px;text-align:right}
+  .socials{justify-content:center}
+  .card{padding:18px 16px}
+  .card-top{flex-direction:column;gap:2px}
+  .when{white-space:normal;padding-top:0}
+  .skill-row{flex-direction:column;gap:2px}
+  .skill-row .k{width:auto}
+}
+</style>
+</head>
+<body>
+
+<!-- ===================== TOP NAV ===================== -->
+<nav class="topnav" aria-label="Primary">
+  <div class="topnav-inner">
+    <ul class="navlinks">
+      <li><a href="#education" class="hide-sm">Education</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills" class="hide-sm">Skills</a></li>
+      <li><a class="resume-btn" href="Resume.pdf" target="_blank" rel="noopener">Resume</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="wrap" id="top">
+
+  <!-- ===================== FIXED LEFT SIDEBAR ===================== -->
+  <aside class="sidebar">
+    <div class="avatar-wrap"><img class="avatar" src="profile.jpg" alt="Varad Suryavanshi" onerror="this.parentElement.style.display='none'"></div>
+    <h1 class="name">Varad Vijay<br>Suryavanshi</h1>
+    <p class="role">AI Researcher — World Models · Embodied AI · Agentic Systems</p>
+    <p class="summary">I work on world models and embodied intelligence — currently a Research Assistant at NYU's AI4CE Lab (Prof. Chen Feng), building large-scale data collection and quality pipelines for scene-scale world models. Previously at NYU's CILVR Lab (Prof. Sherry Yang), where I worked on video world models for robot policy evaluation (ICLR 2026).</p>
+
+    <ul class="meta">
+      <li><span class="k">location</span><span>New York, NY</span></li>
+      <li><span class="k">education</span><span>MSCS, NYU '26</span></li>
+      <li><span class="k">email</span><a href="mailto:vs3273@nyu.edu">vs3273@nyu.edu</a></li>
+      <li><span class="k">phone</span><a href="tel:+15512296385">(551) 229-6385</a></li>
+      <li><span class="k">status</span><span style="color:var(--green)">open to research &amp; engineering roles →</span></li>
+    </ul>
+
+    <div class="socials">
+      <a href="https://github.com/varad-suryavanshi" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/varad-suryavanshi-a1b975227/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="mailto:vs3273@nyu.edu">Email</a>
+      <a href="Resume.pdf" target="_blank" rel="noopener">Resume ↓</a>
+    </div>
+  </aside>
+
+  <!-- ===================== SCROLLING RIGHT PANEL ===================== -->
+  <main class="main">
+
+    <!-- ---------- EDUCATION ---------- -->
+    <section id="education">
+      <div class="sec-label"><h2>Education</h2></div>
+
+      <div class="card">
+        <div class="card-top">
+          <div>
+            <h3>New York University</h3>
+            <div class="where">M.S. in Computer Science — CGPA 3.76/4.0</div>
+          </div>
+          <div class="when">Sep 2024 — May 2026</div>
+        </div>
+        <p>Graduate coursework across ML systems and core CS: Operating Systems, Fundamental Algorithms, Deep Learning, Reinforcement Learning &amp; Decision Making, Large Language &amp; Vision Models, Big Data.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <div>
+            <h3>University of Mumbai</h3>
+            <div class="where">B.E. in Computer Science — CGPA 3.71/4.0</div>
+          </div>
+          <div class="when">Sep 2020 — Jun 2024</div>
+        </div>
+        <p>Foundation in ML, AI, NLP, computer vision, data structures &amp; algorithms, and databases, with honors in Computational Finance.</p>
+      </div>
+    </section>
+
+    <!-- ---------- EXPERIENCE ---------- -->
+    <section id="experience">
+      <div class="sec-label"><h2>Experience</h2></div>
+
+      <div class="card">
+        <div class="card-top">
+          <div>
+            <h3>Research Assistant — AI4CE Lab, NYU</h3>
+            <div class="where">Advised by Prof. Chen Feng · NYU Center for Robotics and Embodied Intelligence · Brooklyn, NY</div>
+          </div>
+          <div class="when">Jun 2026 — Present</div>
+        </div>
+        <ul>
+          <li>Working on the <b>Wanderland project</b> — large-scale, real-world <b>data collection</b> for scene-scale world models and 3D scene understanding.</li>
+          <li>Building <b>data-quality and processing pipelines</b> to improve the training data underlying the lab's world-modeling research.</li>
+        </ul>
+        <div class="tags"><span class="tag">World Models</span><span class="tag">3D Scene Understanding</span><span class="tag">Data Pipelines</span></div>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <div>
+            <h3><a href="https://arxiv.org/abs/2506.00613" target="_blank" rel="noopener">Research Assistant — CILVR Lab, NYU ↗</a></h3>
+            <div class="where">Advised by Prof. Sherry Yang · New York, NY</div>
+          </div>
+          <div class="when">May 2025 — Oct 2025</div>
+        </div>
+        <ul>
+          <li>Built <b>data pipelines and AI workflows</b> ingesting and transforming <b>5TB+ of data</b> across <b>100K+ runs</b> on AWS-backed distributed infrastructure. <i>(ICLR 2026)</i></li>
+          <li>Built <b>evaluation &amp; observability pipelines</b> deploying <b>GPT-4o</b> across 100K+ runs with reference-based metrics and structured validation — <b>r ≈ 0.78</b> with ground truth.</li>
+          <li>Wrote clean, well-tested Python integrating multiple models into pipelines, with code review and validation to catch issues early.</li>
+        </ul>
+        <div class="tags"><span class="tag">Python</span><span class="tag">AWS</span><span class="tag">GPT-4o</span><span class="tag">Distributed Training</span><span class="tag">Evaluation</span></div>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <div>
+            <h3>CS Tutor &amp; Grader — NYU Courant</h3>
+            <div class="where">Courant Institute School of Mathematics, Computing, and Data Science · New York, NY</div>
+          </div>
+          <div class="when">Sep 2025 — May 2026</div>
+        </div>
+        <ul>
+          <li><b>Computer Science Tutor</b> — CSCI-UA 421 Numerical Computing <span style="color:var(--faint)">(Jan 2026 — May 2026)</span></li>
+          <li><b>Computer Science Grader</b> — CSCI-UA 201 Computer Systems Organization <span style="color:var(--faint)">(Sep 2025 — Dec 2025)</span></li>
+        </ul>
+        <div class="tags"><span class="tag">Teaching</span><span class="tag">Numerical Computing</span><span class="tag">Computer Systems</span></div>
+      </div>
+
+      <div class="card">
+        <div class="card-top">
+          <div>
+            <h3>Software Engineering Intern — NTT DATA Business Solutions</h3>
+            <div class="where">Hyderabad, India</div>
+          </div>
+          <div class="when">Aug 2023 — Sep 2023</div>
+        </div>
+        <ul>
+          <li>Built <b>production data pipelines</b> with LangChain + GPT-3.5, integrating embedding-based retrieval via <b>ChromaDB</b> and REST APIs on AWS — improving retrieval accuracy by <b>40%</b>.</li>
+          <li>Optimized API consumption and latency to <b>~1.8s</b> through token-efficient retrieval and top-k strategies.</li>
+        </ul>
+        <div class="tags"><span class="tag">LangChain</span><span class="tag">RAG</span><span class="tag">ChromaDB</span><span class="tag">AWS</span></div>
+      </div>
+    </section>
+
+    <!-- ---------- RESEARCH & PUBLICATIONS ---------- -->
+    <section id="research">
+      <div class="sec-label"><h2>Research &amp; Publications</h2></div>
+
+      <div class="card">
+        <span class="pub-venue">ICLR 2026</span>
+        <h3>World-Model-Based Evaluation of Robotic Policies</h3>
+        <div class="where">CILVR Lab, NYU — with Prof. Sherry Yang</div>
+        <p>Large-scale evaluation of robotic policies inside a video world model — 5TB+ of Open-X Embodiment data, 100K+ rollouts, and a GPT-4o-based multimodal judging harness reaching r ≈ 0.78 agreement with ground truth.</p>
+        <div class="pub-links">
+          <a href="https://arxiv.org/abs/2506.00613" target="_blank" rel="noopener">arXiv:2506.00613 →</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <span class="pub-venue">ICNTE 2026</span>
+        <h3>Tulsi Leaf Disease Detection Using CNNs</h3>
+        <div class="where">Conference Paper</div>
+        <p>End-to-end computer vision pipeline for multi-class plant disease detection using transfer learning on CNN architectures (VGG16, ResNet50) over a custom-curated image dataset, with augmentation and HSV-based preprocessing for robustness.</p>
+      </div>
+
+      <div class="card">
+        <span class="pub-venue alt">Research Work</span>
+        <h3>High-Frequency Trading Using Sentiment Analysis</h3>
+        <p>HFT strategy combining technical indicators (MACD, RSI, Bollinger Bands) with Twitter/Google News sentiment and an LSTM price forecaster — improving predictive accuracy by 14%, backtested via Sharpe ratio, drawdown, and returns.</p>
+      </div>
+    </section>
+
+    <!-- ---------- PROJECTS ---------- -->
+    <section id="projects">
+      <div class="sec-label"><h2>Projects</h2></div>
+
+      <div class="grid">
+
+        <div class="card">
+          <h3><a href="https://github.com/varad-suryavanshi/Self-Supervised-Learning" target="_blank" rel="noopener">Foundation Model Distillation ↗</a></h3>
+          <div class="stack">PyTorch · DINOv2 · Self-Supervised Learning</div>
+          <p>DINOv2 teacher–student distillation with VICReg-style invariance/variance/covariance regularization and multicrop training — <b>+5.1%</b> absolute ImageNet k-NN accuracy; benchmarked SimCLR, BYOL, SwAV.</p>
+        </div>
+
+        <div class="card">
+          <h3><a href="https://github.com/YusufBaig7/ARC-Challenge" target="_blank" rel="noopener">CogniLLM — ARC-AGI Reasoning ↗</a></h3>
+          <div class="stack">DeepSeek-R1 14B · LoRA · Test-Time Training</div>
+          <p>Reasoning-augmented system with LoRA adapters, synthetic data, dual transduction/induction prompting, and a four-solver voting mechanism — task accuracy <b>8% → 29%</b>.</p>
+        </div>
+
+        <div class="card">
+          <h3><a href="https://devrivu.github.io/ReinforcementLearning/" target="_blank" rel="noopener">World Model for Robotic Exploration ↗</a></h3>
+          <div class="stack">DreamerV3 · Model-Based RL</div>
+          <p>Online latent-space world model blending curiosity-driven exploration with optimal trajectories; extended DreamerV3 with 32-env mixed action sampling and a masking fix for faster convergence under 10⁵-step budgets.</p>
+        </div>
+
+        <div class="card">
+          <h3><a href="https://github.com/varad-suryavanshi/Web-Navigation-AI-agent" target="_blank" rel="noopener">Agentic Web-Navigation AI ↗</a></h3>
+          <div class="stack">Playwright · GPT · Agent Memory</div>
+          <p>Autonomous agent orchestrating LLM reasoning with browser tool use via multi-step planning/execution pipelines and trajectory logging — <b>&gt;70% task success over 100+ runs</b> with guardrails and validation.</p>
+        </div>
+
+        <div class="card">
+          <h3><a href="https://github.com/varad-suryavanshi/ai-meeting-copilot" target="_blank" rel="noopener">AI Meeting Copilot ↗</a></h3>
+          <div class="stack">Next.js · TypeScript · Groq Whisper</div>
+          <p>Real-time meeting assistant with <b>~300ms</b> transcription latency, a two-window episodic memory architecture (90s verbatim + compressed history), and contextual suggestions in <b>&lt;2s</b>. <a href="https://ai-meeting-copilot-two.vercel.app/" target="_blank" rel="noopener">Live app →</a></p>
+        </div>
+
+        <div class="card">
+          <h3><a href="https://github.com/varad-suryavanshi/International-Space-Station-Tracker" target="_blank" rel="noopener">Distributed Data Pipeline ↗</a></h3>
+          <div class="stack">Apache Kafka · Apache Spark</div>
+          <p>Fault-tolerant, horizontally scalable ETL pipeline ingesting real-time streams with partitioned event streams, stateful transformations, and data-quality checks at pipeline boundaries.</p>
+        </div>
+
+        <div class="card">
+          <h3><a href="https://github.com/varad-suryavanshi/LLM-Driven-SQL-RAG-Pipeline-for-Banking-Data" target="_blank" rel="noopener">LLM-Driven SQL RAG Pipeline ↗</a></h3>
+          <div class="stack">LangChain · SQLAlchemy · Streamlit</div>
+          <p>Natural-language-to-SQL workflow composing retrieval, prompting, and structured outputs over a relational banking database — <b>+35% accuracy</b>, <b>−40% latency</b> via evaluation-driven iteration.</p>
+        </div>
+
+        <div class="card">
+          <h3><a href="https://github.com/varad-suryavanshi/url-shortener-system-design" target="_blank" rel="noopener">TinyURL System Design ↗</a></h3>
+          <div class="stack">FastAPI · PostgreSQL · Docker · AWS</div>
+          <p>Backend with 8+ REST endpoints, JWT auth, Base62 encoding (~56B key space), integration &amp; performance tests, and CI/CD — indexed for low-latency queries under concurrent load.</p>
+        </div>
+
+        <div class="card">
+          <h3><a href="https://github.com/varad-suryavanshi/document-understanding-ocr" target="_blank" rel="noopener">AI Document Extraction Pipeline ↗</a></h3>
+          <div class="stack">Tesseract · Detectron-2 · LayoutLMv3</div>
+          <p>Production-style document-understanding pipeline for invoices, legal docs, and receipts — CUDA-accelerated inference cutting latency <b>30%</b> across <b>50K+ documents</b>.</p>
+        </div>
+
+        <div class="card">
+          <h3><a href="https://github.com/varad-suryavanshi/ConstituAI-Fine-Tuning-Llama-2-on-the-Indian-Law-Dataset" target="_blank" rel="noopener">ConstituAI — Llama-2 Fine-Tuning ↗</a></h3>
+          <div class="stack">Llama-2-7B · LoRA/QLoRA · Hugging Face</div>
+          <p>Fine-tuned Llama-2-7B-Chat on an Indian law dataset with LoRA/QLoRA and 4-bit quantization — <b>+20%</b> query accuracy, <b>−70%</b> VRAM on limited hardware.</p>
+        </div>
+
+        <div class="card">
+          <h3><a href="https://github.com/varad-suryavanshi/Probability-of-default" target="_blank" rel="noopener">Credit Risk Modeling ↗</a></h3>
+          <div class="stack">LightGBM · CatBoost · pyGAM · XGBoost</div>
+          <p>Probability-of-default models over <b>1M+ financial records</b> (44+ variables), with feature engineering, calibration, and precision-recall/risk-sensitivity evaluation — first-prize winner.</p>
+        </div>
+
+        <div class="card">
+          <h3><a href="https://github.com/varad-suryavanshi/Fraud-Detection-Model-Cost-Optimization" target="_blank" rel="noopener">Fraud Detection &amp; Cost Optimization ↗</a></h3>
+          <div class="stack">XGBoost · LightGBM · Logistic Regression</div>
+          <p>Fraud models on <b>2M+ transactions</b> under heavy class imbalance, plus a cost-sensitive threshold-tuning framework balancing fraud loss against false-positive user impact.</p>
+        </div>
+
+        <div class="card">
+          <h3>Crowd Dynamics Risk Prediction</h3>
+          <div class="stack">YOLO · CSRNet · RAFT/GMFlow</div>
+          <p>Crowd-risk pipeline combining density estimation with optical flow to model dense crowd motion as fluid dynamics; fine-tuned RAFT/GMFlow on TUBCrowdFlow over 2M+ NWPU-Crowd annotations.</p>
+        </div>
+
+        <div class="card">
+          <h3>OS Resource Simulators (C++)</h3>
+          <div class="stack">C++ · Multithreading · OOP</div>
+          <p>Discrete-event <a href="https://github.com/varad-suryavanshi/os-cpu-scheduling-simulator" target="_blank" rel="noopener">CPU scheduler</a>, multithreaded <a href="https://github.com/varad-suryavanshi/os-io-scheduler-simulator-cpp" target="_blank" rel="noopener">I/O scheduler</a>, and <a href="https://github.com/varad-suryavanshi/os-virtual-memory-paging-simulator" target="_blank" rel="noopener">virtual-memory pager</a> — FCFS/SRTF/RR, SSTF/LOOK/C-SCAN, Clock/NRU/Working-Set.</p>
+        </div>
+
+        <div class="card">
+          <h3><a href="https://github.com/varad-suryavanshi/FastAPI-Trade-Order-Service" target="_blank" rel="noopener">Trade Order Management API ↗</a></h3>
+          <div class="stack">FastAPI · SQLAlchemy · GitHub Actions</div>
+          <p>RESTful trade-order backend with Pydantic validation (<b>+35%</b> API response time), Dockerized on AWS EC2 with a full CI/CD pipeline and automated unit/integration tests.</p>
+        </div>
+
+        <div class="card">
+          <h3><a href="https://github.com/varad-suryavanshi/Patient-Readmission-Prediction" target="_blank" rel="noopener">Patient Readmission Prediction ↗</a></h3>
+          <div class="stack">BigQuery · XGBoost · Streamlit</div>
+          <p>End-to-end ETL + ML pipeline on the 100K-record UCI Diabetes dataset — SMOTE for imbalance, XGBoost/LR/MLP models reaching <b>0.81 ROC-AUC</b>, deployed via Streamlit.</p>
+        </div>
+
+        <div class="card">
+          <h3><a href="https://github.com/varad-suryavanshi/blogging-website" target="_blank" rel="noopener">Full-Stack Blogging Platform ↗</a></h3>
+          <div class="stack">React · Node.js · Express · MongoDB</div>
+          <p>MERN blogging platform with JWT authentication, route protection, CRUD post management, and real-time commenting.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ---------- SKILLS ---------- -->
+    <section id="skills">
+      <div class="sec-label"><h2>Skills</h2></div>
+
+      <div class="card" style="cursor:default">
+        <div class="skill-row"><span class="k">languages</span><span class="v">Python · SQL · TypeScript · JavaScript · C++ · Bash</span></div>
+        <div class="skill-row"><span class="k">research</span><span class="v">world models · reinforcement learning · self-supervised learning · vision-language models · LLM evaluation</span></div>
+        <div class="skill-row"><span class="k">data eng</span><span class="v">ETL &amp; data pipelines · Kafka · Spark · PostgreSQL/RDS · ChromaDB · MongoDB · Redis · data quality &amp; validation</span></div>
+        <div class="skill-row"><span class="k">agentic AI</span><span class="v">multi-agent workflows · LLM orchestration · tool use · structured outputs · RAG · LangChain · OpenAI/Anthropic APIs · evaluation &amp; observability</span></div>
+        <div class="skill-row"><span class="k">cloud &amp; infra</span><span class="v">AWS (S3, RDS, EC2) · FastAPI · Docker · CI/CD · pytest · unit &amp; integration testing</span></div>
+        <div class="skill-row"><span class="k">AI-native dev</span><span class="v">Claude Code · Cursor</span></div>
+      </div>
+    </section>
+
+    <footer>
+      <p>Designed &amp; built by Varad Suryavanshi · <a href="https://github.com/varad-suryavanshi" target="_blank" rel="noopener">view source on GitHub</a></p>
+    </footer>
+
+  </main>
+</div>
+
+<script>
+// scrollspy — highlight nav links for the section in view
+const sections=[...document.querySelectorAll('section[id]')];
+const navA=[...document.querySelectorAll('.navlinks a[href^="#"]')];
+const spy=new IntersectionObserver(es=>{
+  es.forEach(e=>{
+    if(e.isIntersecting){
+      navA.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));
+    }
+  });
+},{rootMargin:'-40% 0px -55% 0px'});
+sections.forEach(s=>spy.observe(s));
+</script>
+</body>
+</html>
